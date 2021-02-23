@@ -92,7 +92,7 @@ const Index = () => {
             }}>
                 Ist <span className="text-yellow-500">
                     Kernspaltung
-                </span> gefährlicher als andere Stromquellen?
+                </span> gefährlicher als andere Energiequellen?
             </motion.h1>
 
             <div style={{ opacity: explosionOpacity, display: explosionOpacity > 0 ? "block" : "none" }}>

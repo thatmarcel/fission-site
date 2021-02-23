@@ -5,6 +5,7 @@ const DefaultContainer = ({ children, className }) => (
     <div className="p-0 m-0 bg-black w-full min-h-screen ${className}">
         <Head>
             <title>Kernspaltung</title>
+            <meta name="Description" content="Sollten wir Energie durch Atomkraft erzeugen oder ist Kernspaltung gefährlicher als andere Energiequellen?"></meta>
         </Head>
         <HeaderBar />
         <div className={`mx-auto p-16 self-center hidden lg:block ${className}`} style={{
