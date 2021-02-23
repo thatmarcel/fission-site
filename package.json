@@ -1,0 +1,22 @@
+{
+  "name": "fission-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.0.1",
+    "autoprefixer": "^10.2.4",
+    "framer-motion": "^3.6.2",
+    "next": "^10.0.7",
+    "postcss": "^8.2.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.0.3"
+  }
+}
