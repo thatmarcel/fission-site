@@ -13,7 +13,7 @@ const DefaultContainer = ({ children, className }) => (
         <div className="p-8 pt-28 block lg:hidden text-white">
             <p className="font-bold text-2xl">
                 Diese Seite ist nicht für Mobilgeräte optimiert.<br /><br />
-                Gehe mit deinem Computer auf kernspaltung.nwt.lol, um diese Webseite anzusehen
+                Gehe mit deinem Computer auf kernspaltung.vercel.app, um diese Webseite anzusehen
             </p>
         </div>
     </div>
