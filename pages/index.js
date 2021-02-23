@@ -220,8 +220,8 @@ const Index = () => {
                 maxWidth: "1000px"
             }}>
                 Mit den richtigen Sicherheitsvorkehrungen
-                stellen Atomkraftwerke eine niedrigere Gefahr
-                als fossile Energiequellen, wie Kohlekraft, dar
+                stellen Atomkraftwerke eine niedrigere Gefahr dar
+                als fossile Energiequellen wie Kohlekraft
             </motion.h1>
 
             <motion.h1 className="text-white text-6xl font-extrabold fixed pt-16" style={{
