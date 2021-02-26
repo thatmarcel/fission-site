@@ -1,8 +1,8 @@
 import HeaderBar from "./HeaderBar";
 import Head from "next/head";
 
-const DefaultContainer = ({ children, className }) => (
-    <div className="p-0 m-0 bg-black w-full min-h-screen ${className}">
+const DefaultContainer = ({ children, className }) => {
+    return (<div className="p-0 m-0 bg-black w-full min-h-screen ${className}">
         <Head>
             <title>Kernspaltung</title>
             <meta name="Description" content="Sollten wir Energie durch Atomkraft erzeugen oder ist Kernspaltung gefährlicher als andere Energiequellen?"></meta>
@@ -11,7 +11,7 @@ const DefaultContainer = ({ children, className }) => (
         <div className={`mx-auto p-16 self-center hidden lg:block ${className}`} style={{
             width: "1200px",
             maxWidth: "100%",
-            minHeight: "7000px"
+            minHeight: "8000px"
         }}>
             {children}
         </div>
@@ -21,7 +21,7 @@ const DefaultContainer = ({ children, className }) => (
                 Gehe mit deinem Computer auf kernspaltung.vercel.app, um diese Webseite anzusehen
             </p>
         </div>
-    </div>
-)
+    </div>)
+}
 
 export default DefaultContainer;

@@ -95,7 +95,21 @@ const SplitAnimation = () => {
                 <motion.p
                 initial={{
                     x: 600,
-                    y: 10,
+                    y: -15,
+                    opacity: 0
+                }}
+                animate={{
+                    opacity: 1
+                }}
+                transition={transitionThree}
+                className="text-white font-extrabold text-4xl pb-4">
+                    + Wärmeenergie
+                </motion.p>
+
+                <motion.p
+                initial={{
+                    x: 600,
+                    y: -15,
                     opacity: 0
                 }}
                 animate={{
@@ -103,7 +117,7 @@ const SplitAnimation = () => {
                 }}
                 transition={transitionThree}
                 className="text-white font-extrabold text-4xl">
-                    + Wärmeenergie
+                    + Bewegungsenergie
                 </motion.p>
             </div>
         </motion.div>

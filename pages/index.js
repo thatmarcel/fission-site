@@ -1,7 +1,7 @@
 import DefaultContainer from "../components/DefaultContainer";
 import SplitAnimation from "../components/SplitAnimation";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 import { createRef, useEffect, useState } from "react";
 
 let prev = -1;
@@ -54,13 +54,26 @@ const Index = () => {
     const heading10MarginTop = useTransform(scrollY, [5450, 5550, 5750, 5850], [100, 0, 0, -100]);
     const heading10Opacity = useTransform(scrollY, [5450, 5550, 5750, 5850], [0, 1, 1, 0]);
 
+    const heading11MarginTop = useTransform(scrollY, [5950, 6050, 6250, 6350], [100, 0, 0, -100]);
+    const heading11Opacity = useTransform(scrollY, [5950, 6050, 6250, 6350], [0, 1, 1, 0]);
+
+    const [isRickrolling, setRickrolling] = useState(false);
+
     let player = createRef();
+
+    const updateRickrollingState = () => {
+        console.log(window.scrollY > 5950);
+        setRickrolling(window.scrollY > 5950);
+        setTimeout(updateRickrollingState, 10);
+    }
 
     useEffect(() => scrollY.onChange(latest => {
         if (latest >= 600 && prev < 600) {
             player.current.play();
         }
         prev = latest;
+
+        updateRickrollingState();
     }, []));
 
     return (
@@ -74,15 +87,15 @@ const Index = () => {
             }}>
                 Herunterscrollen zum Fortfahren
             </motion.span>
-            
+
             <motion.h1 className="text-white text-6xl lg:text-8xl font-extrabold fixed" style={{
                 marginTop: heading1MarginTop,
                 opacity: heading1Opacity,
                 maxWidth: "1000px"
             }}>
-                Sollten wir Energie durch <span className="text-yellow-500">
-                    Atomkraft
-                </span> erzeugen?
+                <span className="text-yellow-500">
+                    Kernspaltung
+                </span> und Moderation im Kernkraftwerk
             </motion.h1>
 
             <motion.h1 className="text-white text-6xl lg:text-8xl font-extrabold fixed" style={{
@@ -148,7 +161,7 @@ const Index = () => {
                 </span> wird der Kern eines leicht instabilen Atoms
                 wie Uran-235 durch Hinzugeben eines Neutrons
                 zu einem stark instabilen Atom und
-                spaltet sich in der Folge in zwei Teile
+                spaltet sich in der Folge in zwei ähnlich schwere Atomkerne (Spaltprodukte)
             </motion.h1>
 
             <motion.div style={{
@@ -163,7 +176,7 @@ const Index = () => {
                 opacity: heading5Opacity,
                 maxWidth: "1000px"
             }}>
-                Bei diesem Vorgang werden zusätzlich ca. 3 Neutronen freigesetzt.
+                Bei diesem Vorgang werden zusätzlich ca. 3 Neutronen als Spaltprodukte freigesetzt.
                 Diese können nun mit dem nächsten Uran-235 reagieren und führen so
                 zu einer exponentiellen Kettenreaktion
             </motion.h1>
@@ -232,6 +245,15 @@ const Index = () => {
                 Trotzdem stellt der Atomabfall eine Herausforderung dar,
                 die wir nicht unterschätzen sollten
             </motion.h1>
+
+            <motion.div className="fixed pt-16" style={{
+                marginTop: heading11MarginTop,
+                opacity: heading11Opacity,
+                width: "1000px",
+                height: "563px"
+            }}>
+                <iframe className="w-full h-full" src={isRickrolling ? "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" : ""} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="true"></iframe>
+            </motion.div>
         </DefaultContainer>
     )
 }
