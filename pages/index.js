@@ -45,21 +45,21 @@ const Index = () => {
     const dots2Opacity2 = useTransform(scrollY, [4000, 4100, 4400, 4500], [0, 1, 1, 0]);
     const dots2Opacity3 = useTransform(scrollY, [4050, 4150, 4450, 4550], [0, 1, 1, 0]);
 
-    const heading8MarginTop = useTransform(scrollY, [4650, 4750, 4950, 5050], [100, 0, 0, -100]);
-    const heading8Opacity = useTransform(scrollY, [4650, 4750, 4950, 5050], [0, 1, 1, 0]);
+    const heading8MarginTop = useTransform(scrollY, [4650, 4750, 5550, 5650], [100, 0, 0, -100]);
+    const heading8Opacity = useTransform(scrollY, [4650, 4750, 5550, 5650], [0, 1, 1, 0]);
 
-    const heading9MarginTop = useTransform(scrollY, [5050, 5150, 5350, 5450], [100, 0, 0, -100]);
+    /* const heading9MarginTop = useTransform(scrollY, [5050, 5150, 5350, 5450], [100, 0, 0, -100]);
     const heading9Opacity = useTransform(scrollY, [5050, 5150, 5350, 5450], [0, 1, 1, 0]);
 
     const heading10MarginTop = useTransform(scrollY, [5450, 5550, 6050, 6150], [100, 0, 0, -100]);
-    const heading10Opacity = useTransform(scrollY, [5450, 5550, 6050, 6150], [0, 1, 1, 0]);
+    const heading10Opacity = useTransform(scrollY, [5450, 5550, 6050, 6150], [0, 1, 1, 0]); */
 
     const [isRickrolling, setRickrolling] = useState(false);
 
     let player = createRef();
 
     const updateRickrollingState = () => {
-        console.log(window.scrollY > 5450);
+        console.log(window.scrollY > 4600);
         setRickrolling(window.scrollY > 5450);
         setTimeout(updateRickrollingState, 10);
     }
@@ -220,7 +220,7 @@ const Index = () => {
                 }}>.</motion.p>
             </div>
 
-            <motion.h1 className="text-white text-9xl font-extrabold fixed pt-32" style={{
+            {/* <motion.h1 className="text-white text-9xl font-extrabold fixed pt-32" style={{
                 marginTop: heading8MarginTop,
                 opacity: heading8Opacity,
                 maxWidth: "1000px"
@@ -238,7 +238,7 @@ const Index = () => {
                 als fossile Energiequellen wie Kohlekraft
             </motion.h1>
 
-            {/* <motion.h1 className="text-white text-6xl font-extrabold fixed pt-16" style={{
+            motion.h1 className="text-white text-6xl font-extrabold fixed pt-16" style={{
                 marginTop: heading10MarginTop,
                 opacity: heading10Opacity,
                 maxWidth: "1000px"
@@ -248,8 +248,8 @@ const Index = () => {
             </motion.h1> */}
 
             <motion.div className="fixed pt-16" style={{
-                marginTop: heading10MarginTop,
-                opacity: heading10Opacity,
+                marginTop: heading8MarginTop,
+                opacity: heading8Opacity,
                 width: "1000px",
                 height: "563px"
             }}>
