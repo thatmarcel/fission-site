@@ -98,14 +98,18 @@ const Index = () => {
                 </span> und Moderation im Kernkraftwerk
             </motion.h1>
 
-            <motion.h1 className="text-white text-6xl lg:text-8xl font-extrabold fixed" style={{
+            <motion.h1 className="text-white text-5xl lg:text-7xl font-extrabold fixed" style={{
                 marginTop: heading2MarginTop,
                 opacity: heading2Opacity,
                 maxWidth: "1000px"
             }}>
-                Ist <span className="text-yellow-500">
-                    Kernspaltung
-                </span> gefährlicher als andere Energiequellen?
+                by <span className="text-yellow-500">
+                    Lukas
+                </span>, <span className="text-yellow-500">
+                    Marcel
+                </span> und <span className="text-yellow-500">
+                    Svenja
+                </span>
             </motion.h1>
 
             <div style={{ opacity: explosionOpacity, display: explosionOpacity > 0 ? "block" : "none" }}>
@@ -237,18 +241,18 @@ const Index = () => {
                 als fossile Energiequellen wie Kohlekraft
             </motion.h1>
 
-            <motion.h1 className="text-white text-6xl font-extrabold fixed pt-16" style={{
+            {/* <motion.h1 className="text-white text-6xl font-extrabold fixed pt-16" style={{
                 marginTop: heading10MarginTop,
                 opacity: heading10Opacity,
                 maxWidth: "1000px"
             }}>
                 Trotzdem stellt der Atomabfall eine Herausforderung dar,
                 die wir nicht unterschätzen sollten
-            </motion.h1>
+            </motion.h1> */}
 
             <motion.div className="fixed pt-16" style={{
-                marginTop: heading11MarginTop,
-                opacity: heading11Opacity,
+                marginTop: heading10MarginTop,
+                opacity: heading10Opacity,
                 width: "1000px",
                 height: "563px"
             }}>
