@@ -60,7 +60,7 @@ const Index = () => {
 
     const updateRickrollingState = () => {
         console.log(window.scrollY > 4600);
-        setRickrolling(window.scrollY > 5450);
+        setRickrolling(window.scrollY > 4600);
         setTimeout(updateRickrollingState, 10);
     }
 
