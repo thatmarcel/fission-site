@@ -51,8 +51,8 @@ const Index = () => {
     const heading9MarginTop = useTransform(scrollY, [5050, 5150, 5350, 5450], [100, 0, 0, -100]);
     const heading9Opacity = useTransform(scrollY, [5050, 5150, 5350, 5450], [0, 1, 1, 0]);
 
-    const heading10MarginTop = useTransform(scrollY, [5450, 5550, 5750, 5850], [100, 0, 0, -100]);
-    const heading10Opacity = useTransform(scrollY, [5450, 5550, 5750, 5850], [0, 1, 1, 0]);
+    const heading10MarginTop = useTransform(scrollY, [5450, 5550, 6050, 6150], [100, 0, 0, -100]);
+    const heading10Opacity = useTransform(scrollY, [5450, 5550, 6050, 6150], [0, 1, 1, 0]);
 
     const [isRickrolling, setRickrolling] = useState(false);
 
