@@ -54,16 +54,13 @@ const Index = () => {
     const heading10MarginTop = useTransform(scrollY, [5450, 5550, 5750, 5850], [100, 0, 0, -100]);
     const heading10Opacity = useTransform(scrollY, [5450, 5550, 5750, 5850], [0, 1, 1, 0]);
 
-    const heading11MarginTop = useTransform(scrollY, [5950, 6050, 6250, 6350], [100, 0, 0, -100]);
-    const heading11Opacity = useTransform(scrollY, [5950, 6050, 6250, 6350], [0, 1, 1, 0]);
-
     const [isRickrolling, setRickrolling] = useState(false);
 
     let player = createRef();
 
     const updateRickrollingState = () => {
-        console.log(window.scrollY > 5950);
-        setRickrolling(window.scrollY > 5950);
+        console.log(window.scrollY > 5450);
+        setRickrolling(window.scrollY > 5450);
         setTimeout(updateRickrollingState, 10);
     }
 
