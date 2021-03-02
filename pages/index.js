@@ -247,14 +247,14 @@ const Index = () => {
                 die wir nicht unterschätzen sollten
             </motion.h1> */}
 
-            <motion.div className="fixed pt-16" style={{
+            {/* <motion.div className="fixed pt-16" style={{
                 marginTop: heading8MarginTop,
                 opacity: heading8Opacity,
                 width: "1000px",
                 height: "563px"
             }}>
                 <iframe className="w-full h-full" src={isRickrolling ? "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" : ""} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="true"></iframe>
-            </motion.div>
+            </motion.div> */}
         </DefaultContainer>
     )
 }
